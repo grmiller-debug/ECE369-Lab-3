@@ -44,12 +44,14 @@ module DataMemory(Address, WriteData, Clk, MemWrite, MemRead, ReadData);
     input MemRead; 			// Control signal for memory read 
 
     output reg[31:0] ReadData; // Contents of memory location at Address
+    reg[31:0] memory [0:1023];
+	
 
     integer i;
 
     initial begin
-        for (i = 0; i < 1024, i = i + 1)
-            emory[i] = 32'b0;
+        for (i = 0; i < 1024; i = i + 1)
+            memory[i] = 32'b0;
     end
 
     always @(posedge Clk) begin

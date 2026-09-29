@@ -23,6 +23,8 @@ module RegisterFile_tb();
 	wire [31:0] ReadData1;
 	wire [31:0] ReadData2;
 
+        integer r; 
+
 
 	RegisterFile u0(
 		.ReadRegister1(ReadRegister1), 
